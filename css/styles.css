@@ -1,0 +1,338 @@
+/*typography*/
+
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Source+Sans+Pro&display=swap");
+
+/*---------*/
+
+/*color scheme*/
+:root {
+  --primary-color-light: #733626;
+  --secondary-color-light: #493323;
+  --background-color-light-primary: #fff;
+  --background-color-light-secondary: #fff;
+  --navbar-color-light: rgba(253, 232, 205, 0.75);
+  --text-light: #733626;
+  --primary-color-dark: #ff1e56;
+  --secondary-color-dark: #ffac41;
+  --background-color-dark-primary: #333333;
+  --background-color-dark-secondary: rgba(0, 0, 0, 0.75);
+  --navbar-color-dark: rgba(0, 0, 0, 0.75);
+  --text-dark: #fff;
+  --shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/*---------*/
+
+/*light theme*/
+.light-theme {
+  --primary: var(--primary-color-light);
+  --secondary: var(--secondary-color-light);
+  --background-primary: var(--background-color-light-primary);
+  --background-secondary: var(--background-color-light-secondary);
+  --navbar-color: var(--navbar-color-light);
+  --text:var(--text-light);
+}
+
+/*---------*/
+
+/*dark theme*/
+.dark-theme {
+  --primary: var(--primary-color-dark);
+  --secondary: var(--secondary-color-dark);
+  --background-primary: var(--background-color-dark-primary);
+  --background-secondary: var(--background-color-dark-secondary);
+  --navbar-color: var(--navbar-color-dark);
+  --text:var(--text-dark);
+}
+
+/*---------*/
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  background: var(--background-primary);
+color:var(--text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "JetBrains Mono", monospace;
+  color: var(--primary);
+}
+
+h1 {
+  text-shadow: var(--shadow);
+}
+
+nav {
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+  padding: 1.5rem 0rem;
+  background-color: var(--navbar-color) !important;
+  box-shadow: var(--shadow);
+}
+
+.navbar-dark .navbar-toggler{
+  background-color:var(--primary) !important;
+}
+
+a {
+  color:var(--text) !important;
+}
+
+a:hover {
+  color: var(--secondary) !important;
+}
+/*hero*/
+.hero{
+  margin-bottom: 6rem !important;
+  margin-top:6rem !important
+}
+.polaroid {
+  background: #fff;
+  padding: 1rem;
+  box-shadow: var(--shadow);
+  width: 60%;
+  transform: rotate(-4deg);
+}
+.polaroid > img {
+  max-width: 100%;
+  height: auto;
+}
+.caption {
+  font-size: 1rem;
+  text-align: center;
+  line-height: 2em;
+  color: var(--primary);
+}
+
+
+
+.hero h1 {
+  font-size: 6rem;
+  color: var(--primary);
+  border: 0.25rem solid var(--primary);
+  width: fit-content;
+  font-family: "Source Sans Pro", sans-serif;
+  padding: 0 0.4rem;
+
+}
+
+.hero h2 {
+  font-size: 4rem;
+}
+
+
+
+@media (max-width: 568px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .hero h2 {
+    font-size: 1rem;
+  }
+
+ 
+}
+
+
+
+/*About me*/
+.about-me {
+  margin-top: 6rem;
+}
+
+.about-me h6{
+  color:var(--secondary);
+}
+.about-me img {
+  height: 300px !important;
+  box-shadow: var(--shadow);
+}
+
+@media (max-width: 568px) {
+  .about-me img {
+    display: none;
+  }
+}
+
+.extra {
+  padding: 1rem 0 !important;
+}
+
+.extra h4 {
+  color: var(--primary);
+}
+
+.extra ul {
+  margin-bottom: 0 !important;
+  padding-left: 0 !important;
+}
+
+.badge {
+  background-color: var(--secondary);
+}
+
+/*Education*/
+.accordion {
+  box-shadow: var(--shadow);
+}
+.accordion-button {
+  color: var(--secondary) !important;
+  text-align: left !important;
+
+}
+
+.accordion-button:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 0.25rem var(--primary);
+}
+
+.accordion-button:not(.collapsed) {
+  color: #fff !important;
+  background-color: var(--primary) !important;
+}
+
+
+.accordion-item small a {
+  color: var(--primary) !important;
+  font-family: "JetBrains Mono", monospace;
+}
+
+.accordion-item small {
+  font-size: 0.7rem;
+}
+/*Skills*/
+.progress{
+  background-color: #fff;
+  box-shadow: var(--shadow);
+  border: none;
+}
+.progress-bar {
+  background-color: var(--primary);
+}
+
+/*My projects*/
+
+/*Cards*/
+.card{
+  background-color: var(--background-secondary);
+  box-shadow: var(--shadow);
+  border: none;
+  padding: 0.5rem 0;
+  border-radius: 1rem;
+}
+
+
+.card-body a {
+  text-decoration: none;
+}
+
+.card p{
+  font-size: 1rem;
+}
+
+
+
+/*Even cards*/
+
+
+.card-even h6 {
+  color: var(--secondary);
+  font-weight: bolder;
+}
+
+.card-even i {
+  color: var(--secondary);
+}
+
+.card-even a {
+  color: var(--secondary) !important;
+}
+
+.card-even .card-body i:hover{
+  color: var(--primary);
+}
+
+.card-even .card-body a:hover{
+  color: var(--primary) !important;
+}
+
+/*Odd cards*/
+
+
+.card-odd h6 {
+  color: var(--primary);
+  font-weight: bolder;
+}
+
+.card-odd i{
+  color: var(--primary);
+}
+
+.card-odd a{
+  color: var(--primary) !important;
+}
+
+.card-odd .card-body i:hover {
+  color: var(--secondary);
+}
+
+.card-odd .card-body a:hover {
+  color: var(--secondary) !important;
+}
+
+/*Contact*/
+
+.contacts{
+  background-color: var(--background-secondary);
+  box-shadow: var(--shadow);
+  border-radius: 1rem;
+}
+.contact ul{
+  list-style: none;
+}
+
+.contact li{
+  padding: 1rem;
+  font-size: 2rem;
+}
+
+.contact a{
+  text-decoration: none;
+}
+
+.contact i{
+  font-size: 2rem;
+}
+
+@media (max-width: 568px) {
+  .contact .social-media {
+    display: none;
+  }
+}
+
+#scroll-top {
+  font-size: 1rem;
+  position: fixed;
+  bottom: 9rem;
+  right: 0;
+  padding-right: 0.5rem;
+  cursor: pointer;
+}
+
+@media (min-width: 767px) {
+  #scroll-top {
+    font-size: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+#scroll-top:hover {
+  color: var(--primary);
+}
